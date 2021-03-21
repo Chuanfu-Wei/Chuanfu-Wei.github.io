@@ -342,8 +342,12 @@
         draw();
     }, 100)
         
-    window.onkeydown = function () {
-        return false;
+    window.onmousedown = function (event) {
+        event.preventDefault();
+    }
+        
+    window.oncontextmenu = function (event) {
+        event.preventDefault();
     }
 
 })();
