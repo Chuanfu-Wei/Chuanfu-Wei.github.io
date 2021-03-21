@@ -342,12 +342,8 @@
         draw();
     }, 100)
         
-    window.onmousedown = function (event) {
-        event.preventDefault();
-    }
-        
-    window.oncontextmenu = function (event) {
-        event.preventDefault();
+    window.oncontextmenu = function () {
+        return false;
     }
 
 })();
