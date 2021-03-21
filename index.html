@@ -1,377 +1,217 @@
 <!DOCTYPE html>
-<!--代码声明，声明代码为H5的版本-->
 <html lang="en">
-<!--根标签-->
 
 <head>
-    <!--头部标签-->
+
     <meta charset="UTF-8">
-    <!--声明编码格式-->
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <!-- 自适应 -->
-    <title>HTML5|CSS2|CSS3的学习</title>
-    <!--网页标题-->
-    <link rel="stylesheet" href="css/style.css">
-    <!--Link标签用于链接一些外部的-->
-
-    <!-- 响应式布局，移动端 -->
-    <!-- <link rel="stylesheet" href="css/000-768.css" media="screen and (max-width:768px)">
-    <link rel="stylesheet" href="css/768-992.css" media="screen and (min-width:768px) and (max-width:992px)">
-    <link rel="stylesheet" href="css/992-1200.css" media="screen and (min-width:992px) and (max-width:1200px)">
-    <link rel="stylesheet" href="css/1200-0000.css" media="screen and (min-width:1200px)"> -->
-    <!-- 语法：@media not|only mediatype and (expressions)
-    多媒体类型: all(所有类型设备) print(打印机) screen(电脑，平板，手机) speech(屏幕阅读器) -->
-    <!-- 基于Bootstrap 4.x全球主流框架
-    @media(min-width: 576px) @media (min-width: 768px) @media (min-width: 992px) @media(min-width: 1200px) -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <style>
-      /* 能用CSS完成就不要用js完成 */
-
-* {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    text-decoration: none;
-}
-
-body {
-    background: url("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=471897888,28209475&fm=26&gp=0.jpg");
-    animation: bck-move 40s linear infinite;
-}
-
-@keyframes bck-move {
-    from {
-        background-position: 0px 0px;
-    }
-    to {
-        background-position: 1400px 300px;
-    }
-}
-
-#flex-father {
-    display: flex;
-    justify-content: space-between;
-}
-
-#flex-child1 {
-    display: flex;
-    width: 600px;
-    flex-wrap: wrap;
-    flex-shrink: 0;
-}
-
-
-/* 第六个项目-开始 */
-
-#flex-child2 {
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-#item-6 {
-    width: 200px;
-    height: 200px;
-    transform-style: preserve-3d;
-    /* transform: rotateX(45deg) rotateY(45deg); */
-    /* background-color: green; */
-    animation: three-dimensional-2 20s linear infinite;
-    /* transform-origin: left; */
-    /* transform-origin改变元素基点(基点就是元素绕着旋转或变形的点) 
-    注意：该属性只有在设置了transform属性的时候才起作用 元素的基点默认的是其中心位置
-    属性值: (left|center|right , top|center|bottom) 也可以是px,%等具体值 */
-}
-
-@keyframes three-dimensional-2 {
-    from {
-        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-    }
-    to {
-        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-    }
-}
-
-#item-6 ul {
-    width: 200px;
-    height: 200px;
-    position: absolute
-}
-
-#item-6 ul li {
-    width: 100px;
-    height: 4px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-color: saddlebrown;
-}
-
-#item-6 ul li:nth-child(1) {
-    background-color: red;
-}
-
-#item-6 ul li:nth-child(2) {
-    background-color: greenyellow;
-    transform-origin: left;
-    transform: rotateZ(90deg);
-}
-
-#item-6 ul li:nth-child(3) {
-    background-color: skyblue;
-    transform-origin: left;
-    transform: rotateY(90deg);
-}
-
-#item-6 div {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    transition: all 0.4s linear;
-}
-
-#item-6 div:nth-of-type(1) {
-    transform: translateZ(100px);
-    background-color: rgba(255, 0, 0, 0.6);
-}
-
-#item-6 div:nth-of-type(2) {
-    transform: translateZ(-100px);
-    background-color: rgba(0, 255, 0, 0.6);
-}
-
-#item-6 div:nth-of-type(3) {
-    transform: translateX(-100px) rotateY(90deg);
-    background-color: rgba(0, 0, 255, 0.6);
-}
-
-#item-6 div:nth-of-type(4) {
-    transform: translateX(100px) rotateY(90deg);
-    background-color: rgba(255, 255, 0, 0.6);
-}
-
-#item-6 div:nth-of-type(5) {
-    transform: translateY(100px) rotateX(90deg);
-    background-color: rgba(0, 255, 255, 0.6);
-}
-
-#item-6 div:nth-of-type(6) {
-    transform: translateY(-100px) rotateX(90deg);
-    background-color: rgba(255, 0, 255, 0.6);
-}
-
-#item-6 div::after {
-    width: 100px;
-    height: 100px;
-    font-size: 60px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    line-height: 100px;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.6);
-}
-
-#item-6 div:nth-of-type(1)::after {
-    content: "1";
-}
-
-#item-6 div:nth-of-type(2)::after {
-    content: "2";
-}
-
-#item-6 div:nth-of-type(3)::after {
-    content: "3";
-}
-
-#item-6 div:nth-of-type(4)::after {
-    content: "4";
-}
-
-#item-6 div:nth-of-type(5)::after {
-    content: "5";
-}
-
-#item-6 div:nth-of-type(6)::after {
-    content: "6";
-}
-
-#item-6:hover {
-    animation-play-state: paused;
-}
-
-#item-6:hover div {
-    border-radius: 20px;
-}
-
-#item-6:hover div:nth-of-type(1) {
-    transform: translateZ(166px) scale(1.2);
-}
-
-#item-6:hover div:nth-of-type(2) {
-    transform: translateZ(-166px) scale(1.2);
-}
-
-#item-6:hover div:nth-of-type(3) {
-    transform: translateX(-166px) rotateY(90deg) scale(1.2);
-}
-
-#item-6:hover div:nth-of-type(4) {
-    transform: translateX(166px) rotateY(90deg) scale(1.2);
-}
-
-#item-6:hover div:nth-of-type(5) {
-    transform: translateY(166px) rotateX(90deg) scale(1.2);
-}
-
-#item-6:hover div:nth-of-type(6) {
-    transform: translateY(-166px) rotateX(90deg) scale(1.2);
-}
-
-/* 第六个项目-结束 */
-
-
-/* 第十个项目-开始 */
-
-#flex-child3 {
-    display: flex;
-    width: 600px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-#item-10 {
-    display: flex;
-    flex-wrap: wrap;
-    transform: translate(0px, -200px);
-    width: 100%;
-    position: relative;
-}
-
-#item-10 input {
-    display: none;
-}
-
-#item-10 input:checked+span {
-    color: greenyellow;
-}
-
-#item-10 input:checked+span+img {
-    opacity: 1;
-}
-
-#item-10 label {
-    text-align: center;
-    flex-grow: 1;
-    padding: 10px;
-    color: white;
-    background-color: black;
-}
-
-#item-10 label span {
-    cursor: pointer;
-    padding: 10px 30px;
-}
-
-#item-10 label img {
-    position: absolute;
-    top: 41px;
-    left: 0;
-    width: 100%;
-    height: 300px;
-    opacity: 0;
-    transition: all 0.5s linear;
-}
-
-/* 第十个项目-结束 */
-
-/* 页脚-开始 */
-
-#footer {
-    position: fixed;
-    right: 0px;
-    bottom: 80px;
-    color: greenyellow;
-    opacity: 0.7;
-    font-size: 20px;
-}
-
-/* 页脚-结束 */
-    </style>
-    <script>
-        window.onload = function () {
-            var mp3 = document.getElementById('mp3');
-            var music = document.getElementById('music');
-            mp3.onclick = function () {
-                music.play();
-            };
+        /****************************************页面背景***********************************************/
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-decoration: none;
         }
-    </script>
+
+        body {
+            background: url("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=471897888,28209475&fm=26&gp=0.jpg");
+            animation: bck-move 40s linear infinite;
+        }
+
+        @keyframes bck-move {
+            from {
+                background-position: 0px 0px;
+            }
+
+            to {
+                background-position: 1400px 300px;
+            }
+        }
+        /****************************************页面背景***********************************************/
+
+        #item-6 {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            transform-style: preserve-3d;
+            animation: three-dimensional-2 20s linear infinite;
+        }
+
+        @keyframes three-dimensional-2 {
+            from {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+
+            to {
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+
+        #item-6 ul {
+            width: 200px;
+            height: 200px;
+            position: absolute
+        }
+
+        #item-6 ul li {
+            width: 100px;
+            height: 4px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: saddlebrown;
+        }
+
+        #item-6 ul li:nth-child(1) {
+            background-color: red;
+        }
+
+        #item-6 ul li:nth-child(2) {
+            background-color: greenyellow;
+            transform-origin: left;
+            transform: rotateZ(90deg);
+        }
+
+        #item-6 ul li:nth-child(3) {
+            background-color: skyblue;
+            transform-origin: left;
+            transform: rotateY(90deg);
+        }
+
+        #item-6 div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            transition: all 0.4s linear;
+        }
+
+        #item-6 div:nth-of-type(1) {
+            transform: translateZ(100px);
+            background-color: rgba(255, 0, 0, 0.6);
+        }
+
+        #item-6 div:nth-of-type(2) {
+            transform: translateZ(-100px);
+            background-color: rgba(0, 255, 0, 0.6);
+        }
+
+        #item-6 div:nth-of-type(3) {
+            transform: translateX(-100px) rotateY(90deg);
+            background-color: rgba(0, 0, 255, 0.6);
+        }
+
+        #item-6 div:nth-of-type(4) {
+            transform: translateX(100px) rotateY(90deg);
+            background-color: rgba(255, 255, 0, 0.6);
+        }
+
+        #item-6 div:nth-of-type(5) {
+            transform: translateY(100px) rotateX(90deg);
+            background-color: rgba(0, 255, 255, 0.6);
+        }
+
+        #item-6 div:nth-of-type(6) {
+            transform: translateY(-100px) rotateX(90deg);
+            background-color: rgba(255, 0, 255, 0.6);
+        }
+
+        #item-6 div::after {
+            width: 100px;
+            height: 100px;
+            font-size: 60px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            line-height: 100px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        #item-6 div:nth-of-type(1)::after {
+            content: "1";
+        }
+
+        #item-6 div:nth-of-type(2)::after {
+            content: "2";
+        }
+
+        #item-6 div:nth-of-type(3)::after {
+            content: "3";
+        }
+
+        #item-6 div:nth-of-type(4)::after {
+            content: "4";
+        }
+
+        #item-6 div:nth-of-type(5)::after {
+            content: "5";
+        }
+
+        #item-6 div:nth-of-type(6)::after {
+            content: "6";
+        }
+
+        #item-6:hover {
+            animation-play-state: paused;
+        }
+
+        #item-6:hover div {
+            border-radius: 20px;
+        }
+
+        #item-6:hover div:nth-of-type(1) {
+            transform: translateZ(166px) scale(1.2);
+        }
+
+        #item-6:hover div:nth-of-type(2) {
+            transform: translateZ(-166px) scale(1.2);
+        }
+
+        #item-6:hover div:nth-of-type(3) {
+            transform: translateX(-166px) rotateY(90deg) scale(1.2);
+        }
+
+        #item-6:hover div:nth-of-type(4) {
+            transform: translateX(166px) rotateY(90deg) scale(1.2);
+        }
+
+        #item-6:hover div:nth-of-type(5) {
+            transform: translateY(166px) rotateX(90deg) scale(1.2);
+        }
+
+        #item-6:hover div:nth-of-type(6) {
+            transform: translateY(-166px) rotateX(90deg) scale(1.2);
+        }
+
+    </style>
 </head>
 
 <body>
-    <!--身体标签-->
-  
-        <!-- 第六个项目-开始 -->
-        <div id="flex-child2">
-            <div id="item-6">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-        <!-- 第六个项目-结束 -->
-        <div id="flex-child3">
-            <!-- 第十个项目-开始 -->
-            <div id="item-10">
-                <label>
-                    <input type="radio" name="zbj">
-                    <span>CSS3</span>
-                    <img src="img/6.jfif" alt="">
-                </label>
-                <label>
-                    <input type="radio" name="zbj">
-                    <span>实现</span>
-                    <img src="img/7.jfif" alt="">
-                </label>
-                <label>
-                    <input type="radio" name="zbj">
-                    <span>点击</span>
-                    <img src="img/8.jpg" alt="">
-                </label>
-                <label>
-                    <input type="radio" name="zbj">
-                    <span>切换</span>
-                    <img src="img/9.jpg" alt="">
-                </label>
-                <label>
-                    <input type="radio" name="zbj" checked>
-                    <span>轮播图</span>
-                    <img src="img/10.jpg" alt="">
-                </label>
-            </div>
-            <!-- 第十个项目-结束 -->
+
+    <div id="flex-child2">
+        <div id="item-6">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     </div>
-
-
-    <!-- 页脚-开始 -->
-    <a id="footer" href="https://www.cnblogs.com/hellocd/p/10443237.html" target="_blank">点击跳转--弹性盒子属性详解</a>
-    <!-- 页脚-结束 -->
 
 </body>
 
