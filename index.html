@@ -5,8 +5,13 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <script src="webMyself/bck.js"></script>
+    <script>
+        window.oncontextmenu = function () {
+            return false;
+        }
+    </script>
     <script src="webMyself/examDate.js"></script>
+    <script src="webMyself/bck.js"></script>
     <style>
         /****************************************页面背景***********************************************/
         * {
@@ -236,11 +241,5 @@
         <p>-------魏川傅</p>
     
 </body>
-    
-<script>
-        window.oncontextmenu = function () {
-            return false;
-        }
-</script>
     
 </html>
