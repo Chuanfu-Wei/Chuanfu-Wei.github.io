@@ -1,3 +1,8 @@
+if (typeof window.onload == 'function') {
+    var saved = null;
+    saved = window.onload;
+}
+
 window.onload = function () {
 
   function checkNum(nums) {
