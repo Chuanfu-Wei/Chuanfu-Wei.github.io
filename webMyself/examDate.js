@@ -1,7 +1,7 @@
-if (typeof window.onload == 'function') {
-    var saved = null;
-    saved = window.onload;
-}
+// if (typeof window.onload == 'function') {
+//     var saved = null;
+//     saved = window.onload;
+// }
 
 window.onload = function () {
 
