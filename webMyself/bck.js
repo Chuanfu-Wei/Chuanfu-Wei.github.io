@@ -3,7 +3,6 @@
 //     saved = window.onload;
 // }
 // JavaScript Document
-window.onload = function () {
 
     (function () {
         //创建canvas元素，并设置canvas元素的id
@@ -58,7 +57,7 @@ window.onload = function () {
         function getAttr() {
             var i = document.getElementsByTagName("script"),
                 w = i.length,
-                v = i[0];//v为最后一个script元素，即引用了本文件的script元素
+                v = i[w - 1];//v为最后一个script元素，即引用了本文件的script元素
             // return {
             //     l: w,
             //     z: mygetAttribute(v, "zIndex", -1),
@@ -224,5 +223,3 @@ window.onload = function () {
         }, 100)
 
     })();
-
-}
