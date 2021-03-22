@@ -1,7 +1,3 @@
-// if (typeof window.onload == 'function') {
-//     var saved = null;
-//     saved = window.onload;
-// }
 // JavaScript Document
 
     (function () {
