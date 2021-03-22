@@ -4,6 +4,8 @@
 // }
 
 window.onload = function () {
+            
+            // saved();
 
             function checkNum(nums) {
                 if (nums < 10) {
