@@ -13,10 +13,6 @@ window.onload = function () {
             }
 
             var mydiv = document.querySelector('#examDate');
-            mydiv.onclick=function(){
-                console.log("1");
-            }
-  
             function showTime() {
                 var now = new Date();
                 var target = new Date(2022, 2, 20)
@@ -34,5 +30,5 @@ window.onload = function () {
                 setTimeout(showTime, 1000);
             }
             showTime();
-  
-}
+
+        }
