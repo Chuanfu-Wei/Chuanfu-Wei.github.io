@@ -12,6 +12,7 @@
         #examDate{
             margin: 26px auto;
             height: 50px;
+            z-index: 10;
         }
         
         p{
