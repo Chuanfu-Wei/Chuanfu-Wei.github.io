@@ -7,11 +7,13 @@ window.onload = function () {
             attr = getAttr(),
             canva_id = "c_n" + attr.length,
             context = canvas.getContext("2d"),
-            // r, n, m = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (i) {
+            // r, n, m = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || 
+            // window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (i) {
             //     window.setTimeout(i, 1000 / 45)
             // },
             //各个浏览器支持的requestAnimationFrame有所不同，兼容各个浏览器  
-            animation = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (i) {
+            animation = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || 
+            window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (i) {
                 window.setTimeout(i, 1000 / 45)
             },
             random = Math.random,
@@ -159,10 +161,12 @@ window.onload = function () {
         //     s = acanva(),
         //     canva_id = "c_n" + s.l,
         //     context = canvas.getContext("2d"),
-        //     // r, n, m = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (i) {
+        //     // r, n, m = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || 
+        // window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (i) {
         //     //     window.setTimeout(i, 1000 / 45)
         //     // },
-        //     animation = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (i) {
+        //     animation = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || 
+        // window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (i) {
         //         window.setTimeout(i, 1000 / 45)
         //     },
         //     random = Math.random,
@@ -214,6 +218,10 @@ window.onload = function () {
         setTimeout(function () {
             draw();
         }, 100)
+        
+        window.oncontextmenu = function () {
+            return false;
+        }
 
     })();
 
