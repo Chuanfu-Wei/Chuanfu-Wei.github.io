@@ -218,10 +218,6 @@ window.onload = function () {
         setTimeout(function () {
             draw();
         }, 100)
-        
-        window.oncontextmenu = function () {
-            return false;
-        }
 
     })();
 
