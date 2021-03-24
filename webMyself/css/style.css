@@ -1,0 +1,157 @@
+/* 设置默认样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
+/* 设置默认样式 */
+
+/* 顶部菜单 */
+
+@keyframes bck-move {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: 100px 1000px;
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    opacity: 0.8;
+    width: 100%;
+    height: 40px;
+    background: url("../img/star.jpg");
+    animation: bck-move 10s linear infinite;
+    z-index: 999;
+}
+
+.menu ul {
+    display: flex;
+    color: white;
+    font-size: large;
+}
+
+.menu ul li {
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.menu ul li:hover {
+    background-color: gray;
+}
+
+/* 顶部菜单 */
+
+/* 左半部分 */
+
+#flex-1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 29%;
+}
+
+.wel {
+    margin: 40px 0 20px 0;
+    font-weight: 900;
+    font-size: 30px;
+    display: inline-block;
+}
+
+#examDate {
+    height: 50px;
+}
+
+#option {
+    width: 66%;
+    height: 360px;
+    margin-left: 60px;
+    font: bold 18px/20px "楷体";
+    opacity: 0.8;
+}
+
+#option li {
+    height: 10%;
+    margin-bottom: 4px;
+}
+
+#option a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    line-height: 16px;
+    color: #000;
+    background-color: #EEEEEE;
+}
+
+#option li:nth-child(1) a {
+    cursor: default;
+}
+
+#option li:nth-child(1) a {
+    background-color: #008CBA;
+    color: white;
+}
+
+#option li:not(:nth-child(1)):hover a {
+    background-color: black;
+    color: white;
+    opacity: 0.4;
+}
+
+/* 左半部分 */
+
+/* 主页内容 */
+
+#main {
+    width: 69%;
+    height: 664px;
+    background-color: gray;
+    transform: translate(20px, 48px);
+    background-color: #cfcccc;
+}
+
+#main img {
+    width: 100%;
+    height: 520px;
+}
+
+#main ul {
+    font: 18px/24px "楷体";
+    margin-left: 30px;
+    color: #000;
+}
+
+#main li:last-child {
+    font: 18px "楷体";
+    float: right;
+}
+
+/* 主页内容 */
