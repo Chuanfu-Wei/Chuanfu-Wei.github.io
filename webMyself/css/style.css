@@ -27,6 +27,13 @@ a:active {
     color: white;
 }
 
+@font-face {
+    font-family: 'iconfont';
+    /* project id 2328694 */
+    src: url('https://at.alicdn.com/t/font_2328694_1bx6u6nikuj.eot');
+    src: url('https://at.alicdn.com/t/font_2328694_1bx6u6nikuj.eot?#iefix') format('embedded-opentype'), url('https://at.alicdn.com/t/font_2328694_1bx6u6nikuj.woff2') format('woff2'), url('https://at.alicdn.com/t/font_2328694_1bx6u6nikuj.woff') format('woff'), url('https://at.alicdn.com/t/font_2328694_1bx6u6nikuj.ttf') format('truetype'), url('https://at.alicdn.com/t/font_2328694_1bx6u6nikuj.svg#iconfont') format('svg');
+}
+
 /* 设置默认样式 */
 
 /* 顶部菜单 */
@@ -64,6 +71,10 @@ a:active {
 
 .menu ul li:hover {
     background-color: gray;
+}
+
+.menu ul li:last-child{
+    font-family: 'iconfont';
 }
 
 /* 顶部菜单 */
