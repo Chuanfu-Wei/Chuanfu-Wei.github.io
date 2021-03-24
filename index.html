@@ -22,14 +22,22 @@
 </head>
 
 <body>
-
     <div class="menu">
         <ul>
             <li><a href="index.html">HOME</a></li>
             <li>关于我</li>
             <li><a href="https://blog.csdn.net/weixin_54850753?spm=1001.2100.3001.5343">我的のCSDN</a></li>
+            <li id="mp3">&#xe60f;点击可听音乐&#xe60f;</li>
         </ul>
     </div>
+    <audio src="webMyself/music/1.mp3" id="music"></audio>
+    <script>
+        var mp3 = document.getElementById('mp3');
+        var music = document.getElementById('music');
+        mp3.onclick = function () {
+            music.play();
+        };
+    </script>
 
     <div id="flex-1">
 
