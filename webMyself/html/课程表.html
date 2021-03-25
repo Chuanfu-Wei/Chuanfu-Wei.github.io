@@ -1,14 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的课程表</title>
-  <link rel="stylesheet" href="../css/课程表.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的课程表</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        h5 {
+            text-align: right;
+        }
+
+        table {
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+            background-color: #F3F3F3;
+            line-height: 26px;
+            opacity: 0.7;
+        }
+    </style>
 </head>
+
 <body>
-  
+
+    <h1>CLASS TABLE</h1>
+
+    <table border="1">
+        <!-- 上午课表 -->
+        <tr style="background-color: #E9FAFF;color: #346A9D;line-height: 30px;">
+            <th>时间段</th>
+            <th>节次</th>
+            <th>星期一</th>
+            <th>星期二</th>
+            <th>星期三</th>
+            <th>星期四</th>
+            <th>星期五</th>
+            <th>星期六</th>
+            <th>星期日</th>
+        </tr>
+        <tr>
+            <td rowspan="5" style="background-color: #E9FAFF;">上午</td>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td></td>
+            <td rowspan="4">
+                职业发展(4-5节)(1-6周)<br><br>
+                移动前端设计(12-13周)<br><br>
+                高级脚本框架(14-16||17-18周)<br>
+            </td>
+            <td rowspan="4">
+                毛泽东思想(1-3周)<br><br>
+                常用工具软件(1-3周)<br><br>
+                高级脚本框架(1-3周)
+            </td>
+            <td rowspan="4">
+                接口设计编写(1-7||9-17周)<br><br>
+                移动前端设计(12-13周)<br><br>
+                高级脚本框架(18周)
+            </td>
+            <td rowspan="4">
+                高级脚本框架(18周)
+            </td>
+            <td rowspan="4">
+                移动前端设计(12-13周)
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td rowspan="2">体育与健康</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td></td>
+        </tr>
+        <!-- 上午课表 -->
+
+        <tr style="height: 30px;background-color: white;">
+            <td colspan="9"></td>
+        </tr>
+
+        <!-- 下午课表 -->
+        <tr>
+            <td rowspan="4" style="background-color: #E9FAFF;">下午</td>
+            <td>6</td>
+            <td rowspan="4">
+                毛泽东思想(1-5||7-8周)<br><br>
+                移动前端设计(12-13周)<br><br>
+                网页特效设计(14-15周)<br><br>
+                高级脚本框架(17-18周)
+            </td>
+            <td></td>
+            <td rowspan="4">
+                移动前端设计(12-13周)<br><br>
+                网页特效设计(14-15周)
+            </td>
+            <td rowspan="4">
+                高级脚本框架(18周)<br><br>
+                PHP Web开发(1-7||9-17周)
+            </td>
+            <td rowspan="4">
+                移动前端设计(12-13周)<br><br>
+                高级脚本框架(18周)
+            </td>
+            <td></td>
+            <td rowspan="4">
+                移动前端设计(12-13周)
+            </td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- 下午课表 -->
+
+        <tr style="height: 30px;background-color: white;">
+            <td colspan="9"></td>
+        </tr>
+
+        <!-- 晚上课表 -->
+        <tr>
+            <td rowspan="4" style="background-color: #E9FAFF;">晚上</td>
+            <td>10</td>
+            <td></td>
+            <td rowspan="4">
+                网页特效设计(14-15周)
+            </td>
+            <td></td>
+            <td rowspan="4">
+                常用工具软件(2-7周)<br><br>
+                网页特效设计(14-15周)
+            </td>
+            <td></td>
+            <td></td>
+            <td rowspan="4">
+                移动前端设计(12-13周)
+            </td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- 晚上课表 -->
+        
+    </table><br>
+
+    <h5>----------------2021.03.01~2021.07.04</h5>
+
 </body>
 
 <script src="../js/bck.js"></script>
