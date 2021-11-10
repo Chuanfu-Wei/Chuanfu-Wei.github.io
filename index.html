@@ -8,6 +8,7 @@
 	<title>常用资源</title>
 	<link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">
 	<link rel="stylesheet" href="./css/style.css">
+	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 </head>
 
 <body>
@@ -191,12 +192,16 @@
 	<script src="plugins/feather.min.js"></script>
 	<script src="js/script.js"></script>
 	<script>
-		//防止页面后退
-		history.pushState(null, null, document.URL);
-		window.addEventListener('popstate', function () {
-			history.pushState(null, null, document.URL);
-		});
+		// //防止页面后退
+		// if (window.location.href.indexOf("/login") > -1) {
+		// 	history.pushState(null, null, document.URL);
+		// 	window.addEventListener('popstate', function () {
+		// 		history.pushState(null, null, document.URL);
+		// 	});
+		// }
+
 	</script>
+	<script>$(document).ready(function (e) { if (window.history && window.history.pushState) { $(window).on('popstate', function () { window.history.pushState('forward', null, '#'); window.history.forward(1); }); } if ('pushState' in history) { window.history.pushState('forward', null, '#'); window.history.forward(1); } else { History.pushState('forward', null, '?state=2'); window.history.forward(1); } window.onhashchange = function () { History.pushState('forward', null, '?state=1'); } });</script>
 </body>
 
 </html>
