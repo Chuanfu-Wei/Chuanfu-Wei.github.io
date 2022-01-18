@@ -531,7 +531,7 @@ window.onload = function () {
   var mydiv = document.querySelector('#examDate');
   function showTime() {
     var now = new Date();
-    var target = new Date(2022, 2, 15)
+    var target = new Date(2022, 2, 19)
     var result = Math.floor((target.getTime() - now.getTime()) / 1000); // 总秒数
     if (result == 0) {
       mydiv.innerText = '今天考试啦！！！';
