@@ -1,63 +1,1081 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
-	<meta charset="UTF-8">
+	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>小傅备用网</title>
-	<link rel="stylesheet" href="./css/style.css">
+	<title>欢迎来到小傅博客网</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="description" content="Sunshine - Responsive vCard Template" />
+	<meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, Sunshine, portfolio" />
+	<meta name="author" content="lmtheme" />
+	<link rel="shortcut icon" href="resources/favicon.ico">
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/transition-animations.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/main.css" type="text/css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/jquery-2.1.3.min.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+
+	<script src='js/google_api.js'></script><!-- https://www.google.com/recaptcha/api.js -->
 </head>
 
 <body>
-	<div class="page-flex">
+	<!-- Loading animation 加载动画 -->
+	<div class="preloader">
+		<div class="preloader-animation">
+			<div class="dot1"></div>
+			<div class="dot2"></div>
+		</div>
+	</div>
+	<!-- /Loading animation -->
 
-		<aside class="sidebar">
-			<ul class="sidebar-body-menu">
-				<li>
-					<a class="active" href="/"><span aria-hidden="true"></span>首页</a>
-					<a class="active" target="_blank" href="html/Code_Rain.html"><span aria-hidden="true"></span>黑客帝国代码雨</a>
-					<a class="active" target="_blank" href="html/bck+cube.html"><span aria-hidden="true"></span>Cube+Bck+Music</a>
-				</li>
-			</ul>
-		</aside>
+	<div id="page" class="page">
+		<!-- Header 头部-侧边栏 -->
+		<header id="site_header" class="header mobile-menu-hide">
+			<div class="my-photo">
+				<img src="images/my_photo.jpg" alt="image">
+				<div class="mask"></div>
+			</div>
 
-		<div class="main-wrapper">
-			<nav class="main-nav--bg">
-				<div class="container main-nav">
-					<div class="main-nav-end">
-						<!-- 换黑白 -->
-						<button class="theme-switcher gray-circle-btn" type="button" title="Switch theme">
-							<span class="sr-only">Switch theme</span>
-							<i class="sun-icon" data-feather="sun" aria-hidden="true"></i>
-							<i class="moon-icon" data-feather="moon" aria-hidden="true"></i>
-						</button>
+			<div class="site-title-block">
+				<h1 class="site-title">小傅 · 个人博客</h1>
+				<p class="site-description">慢慢理解生活 慢慢更新自己</p>
+			</div>
 
-						<span class="notification-dropdown__title">转本倒计时：</span>
-						<span class="notification-dropdown__subtitle" id="examDate"></span>
+			<!-- Navigation & Social buttons 导航和社交按钮 -->
+			<div class="site-nav">
+				<!-- Main menu 主菜单 -->
+				<ul id="nav" class="site-main-menu">
+					<!-- Subpage link 子页链接 -->
+					<!-- href value = data-id without # of .pt-page. Data-goto is the number of section -->
+					<li>
+						<a class="pt-trigger" href="#home" data-animation="58" data-goto="1">主页</a>
+					</li>
+					<li>
+						<a class="pt-trigger" href="#about_me" data-animation="59" data-goto="2">关于我</a>
+					</li>
+					<li>
+						<a class="pt-trigger" href="#resume" data-animation="60" data-goto="3">简历</a>
+					</li>
+					<li>
+						<a class="pt-trigger" href="#portfolio" data-animation="61" data-goto="4">作品</a>
+					</li>
+					<li>
+						<a class="pt-trigger" href="#blog" data-animation="58" data-goto="5">博客</a>
+					</li>
+					<li>
+						<a class="active" target="_blank" href="html/Code_Rain.html"><span aria-hidden="true"></span>黑客帝国代码雨</a>
+					</li>
+					<li>
+						<a class="active" target="_blank" href="html/bck+cube.html"><span aria-hidden="true"></span>Cube+Bck+Music</a>
+					</li>
+				</ul>
+				<!-- /Main menu -->
 
-						<div style="color: blue;">
-							1()，2()，3()，4()，5()，6()，7()，8()，9()，10()，11()，12()，13()，14()，15()，16()，17()
+				<!-- Social buttons 社交按钮 -->
+				<!-- Full list of social icons: http://fontawesome.io/icons/#brand -->
+				<ul class="social-links">
+					<li><a class="tip social-button" href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+					<li><a class="tip social-button" href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+					<li><a class="tip social-button" href="#" title="Google Plus"><i class="fa fa-google-plus"></i></a>
+					</li>
+					<!--<li><a class="tip social-button" href="#" title="Youtube"><i class="fa fa-youtube"></i></a></li>-->
+					<!--<li><a class="tip social-button" href="#" title="last.fm"><i class="fa fa-lastfm"></i></a></li>-->
+					<!--<li><a class="tip social-button" href="#" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>-->
+				</ul>
+				<span class="notification-dropdown__title">转本倒计时：</span>
+				<span class="notification-dropdown__subtitle" id="examDate"></span>
+				<!-- /Social buttons -->
+			</div>
+			<!-- /Navigation & Social buttons -->
+		</header>
+		<!-- /Header -->
+
+		<!-- Mobile Header 移动报头（手机端） -->
+		<div class="mobile-header mobile-visible">
+			<div class="mobile-logo-container">
+				<div class="mobile-site-title">欢迎来到小傅博客网，目录在右边！</div>
+			</div>
+
+			<a class="menu-toggle mobile-visible">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+		<!-- /Mobile Header -->
+
+		<!-- Main Content 主要内容 -->
+		<div id="main" class="site-main">
+			<!-- Page changer wrapper 换页器包装 -->
+			<div class="pt-wrapper">
+				<!-- Subpages 子页面 -->
+				<div class="subpages">
+
+					<!-- Home Subpage 主页-子页 -->
+					<section class="pt-page pt-page-1 section-with-bg section-paddings-0" data-id="home">
+						<!-- js背景画布 -->
+						<canvas id="myCanvas" style="width: 100%;height: 100%;position: absolute;top: 0;"></canvas>
+						<!-- 主要内容 -->
+						<div style="width: 100%;height: 0;position: absolute;top: 0;">
+							<div class="home-page-block-bg">
+								<div class="mask"></div>
+							</div>
+							<div class="home-page-block">
+								<div class="v-align">
+									<h2>xfblog</h2>
+									<div id="rotate" class="text-rotate">
+										<div>
+											<p class="home-page-description">前端开发人员</p>
+										</div>
+										<div>
+											<p class="home-page-description">网页设计师</p>
+										</div>
+										<div>
+											<p class="home-page-description">PHP工程师</p>
+										</div>
+									</div>
+
+									<div class="block end" style="text-align: center">
+										<ul class="info-list">
+											<li><span class="title">Age</span><span class="value">20</span></li>
+											<li><span class="title">Address</span><span
+													class="value">Jiangsu，China</span></li>
+											<li><span class="title">e-mail</span><span class="value"><a
+														href="mailto:Chuanfu7w@163.com">Chuanfu7w@163.com</a></span>
+											</li>
+											<li><span class="title">Phone</span><span class="value">15325277435</span>
+											</li>
+											<li><span class="title">Occupation</span><span
+													class="value available">Student</span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- End of Home Subpage -->
+
+					<!-- About Me Subpage 关于我-子页 -->
+					<section class="pt-page pt-page-2" data-id="about_me">
+						<div class="section-title-block">
+							<h2 class="section-title">About Me</h2>
+							<h5 class="section-description">关于我</h5>
 						</div>
 
-					</div>
-				</div>
-			</nav>
-			<div style="align-items: center;color: red;font-weight: bold;font-size: 20px;margin: 0 auto;width: 800px;display: flex;height: 300px;flex-direction: column;justify-content: space-around;">
-				<span style="font-size: 32px;">17天强度每日任务：（没完成不准睡觉！）</span>
-				<br>
-				<span>1、两张高数模拟卷+错题整理</span>
-				<span>2、实操一张卷子+整理</span>
-				<span>3、哔哩哔哩理论集训学习</span>
-				<span>4、每天两张理论模拟卷+错题整理背诵（4换3，最后10天开始）</span>
-			</div>
-		</div>
+						<div class="row">
+							<div class="col-sm-6 col-md-6 subpage-block">
+								<div class="general-info">
+									<h3>自我介绍，也分享一下搭建网站的快乐</h3>
+									<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;叫我小傅就好，相信大家也看得出来网站域名是小傅博客的缩写。
+										说到网站，从域名 到 服务器 再到 IPC备案，总的一个流程下来花了我大概20天，也算是相信了网上那些一天就能完成备案的（微笑）；在等待网站备案的过程中，
+										也算是差不多利用这个时间写完了网站的代码。其实说来挺不容易的，谁叫我技术还不到位呢，也是花了些时间，一共也是更新了大概15个版本才完成，而最终使用这个版本也是我觉得还凑合，哈哈。
+									</p>
+									<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;至于为什么要搭建这个博客呢，既然是博客，肯定是想和大家一起在分享中学习的，也希望各位可以针对不足的地方提出建议，从善如流！
+									</p>
+									<h5>*声明：网站已备案，目前仅用于个人学习与博客分享，暂不用于盈利*</h5>
+								</div>
+							</div>
 
+							<div class="col-sm-6 col-md-6 subpage-block">
+								<div class="block-title">
+									<h3>座右铭</h3>
+								</div>
+								<div class="testimonials owl-carousel">
+									<!-- Testimonial 1 -->
+									<div class="testimonial-item">
+										<!-- Testimonial Content -->
+										<div class="testimonial-content">
+											<div class="testimonial-text">
+												<p>"子贡问曰：“有一言而可以终身行之者乎？” 子曰：“其恕乎！己所不欲，勿施于人。”"</p>
+											</div>
+										</div>
+										<!-- /Testimonial Content -->
+										<!-- Testimonial Author -->
+										<div class="testimonial-credits">
+											<!-- Picture -->
+											<div class="testimonial-picture">
+												<img src="images/testimonials/zuoren.jfif" alt="">
+											</div>
+											<!-- /Picture -->
+											<!-- Testimonial author information -->
+											<div class="testimonial-author-info">
+												<p class="testimonial-author">做人</p>
+												<p class="testimonial-firm">论语十则之一</p>
+											</div>
+										</div>
+										<!-- /Testimonial author information -->
+									</div>
+									<!-- End of Testimonial 1 -->
+
+									<!-- Testimonial 2 -->
+									<div class="testimonial-item" style="width:100%">
+										<!-- Testimonial Content -->
+										<div class="testimonial-content">
+											<div class="testimonial-text">
+												<p>"学而不思则罔，思而不学则殆。"</p>
+											</div>
+										</div>
+										<!-- /Testimonial Content -->
+										<!-- Testimonial Author -->
+										<div class="testimonial-credits">
+											<!-- Picture -->
+											<div class="testimonial-picture">
+												<img src="images/testimonials/zuoshi.jpg" alt="">
+											</div>
+											<!-- /Picture -->
+											<!-- Testimonial author information -->
+											<div class="testimonial-author-info">
+												<p class="testimonial-author">做事</p>
+												<p class="testimonial-firm">论语十则之一</p>
+											</div>
+										</div>
+										<!-- /Testimonial author information -->
+									</div>
+									<!-- End of Testimonial 2 -->
+
+									<!-- Testimonial 3 -->
+									<div class="testimonial-item" style="width:100%">
+										<!-- Testimonial Content -->
+										<div class="testimonial-content">
+											<div class="testimonial-text">
+												<p>"吾日三省吾身：为人谋而不忠乎？与朋友交而不信乎？传不习乎？"</p>
+											</div>
+										</div>
+										<!-- /Testimonial Content -->
+										<!-- Testimonial Author -->
+										<div class="testimonial-credits">
+											<!-- Picture -->
+											<div class="testimonial-picture">
+												<img src="images/testimonials/zuoji.jpg" alt="">
+											</div>
+											<!-- /Picture -->
+											<!-- Testimonial author information -->
+											<div class="testimonial-author-info">
+												<p class="testimonial-author">做己</p>
+												<p class="testimonial-firm">论语十则之一</p>
+											</div>
+										</div>
+										<!-- /Testimonial author information -->
+									</div>
+									<!-- End of Testimonial 3 -->
+								</div>
+							</div>
+						</div>
+
+						<!-- Services block -->
+						<div class="block-title">
+							<h3>爱好</h3>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-6 col-md-3 subpage-block">
+								<div class="service-block">
+									<div class="service-info">
+										<img src="images/service/web_design.png" alt="Responsive Design">
+										<h4>网页设计</h4>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6 col-md-3 subpage-block">
+								<div class="service-block">
+									<div class="service-info">
+										<img src="images/service/copywrite.png" alt="Copywriter">
+										<h4>文案写作</h4>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6 col-md-3 subpage-block">
+								<div class="service-block">
+									<div class="service-info">
+										<img src="images/service/ecommerce.png" alt="E-Commerce">
+										<h4>电子商务</h4>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6 col-md-3 subpage-block">
+								<div class="service-block">
+									<div class="service-info">
+										<img src="images/service/management.png" alt="Management">
+										<h4>经营管理</h4>
+									</div>
+									<h4>CSDN</h4>
+									<p style="font-size: 10px;">专业开发者社区</p>
+								</div>
+							</div>
+						</div>
+						<!-- End of Services block -->
+
+						<!-- Clients block -->
+						<div class="block-title">
+							<h3>常用资源（超链接）</h3>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-4 col-md-2 subpage-block">
+								<div class="service-block" style="background-color: #F6F6F6;">
+									<a href="https://www.csdn.net/" target="_blank"
+										style="color:inherit;text-decoration: none;">
+										<h4>CSDN</h4>
+										<p style="font-size: 10px;">专业开发者社区，全球知名中文IT技术交流平台</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-4 col-md-2 subpage-block">
+								<div class="service-block" style="background-color: #F6F6F6;">
+									<a href="https://github.com/" target="_blank"
+										style="color:inherit;text-decoration: none;">
+										<h4>GitHub</h4>
+										<p style="font-size: 10px;">面向开源及私有软件项目的托管平台，建议翻墙</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-4 col-md-2 subpage-block">
+								<div class="service-block" style="background-color: #F6F6F6;">
+									<a href="https://www.iconfont.cn/" target="_blank"
+										style="color:inherit;text-decoration: none;">
+										<h4>Iconfont*</h4>
+										<p style="font-size: 10px;">阿里巴巴矢量图标库，提供下载/在线存储/格式转换</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-4 col-md-2 subpage-block">
+								<div class="service-block" style="background-color: #F6F6F6;">
+									<a href="http://hao.shejidaren.com/" target="_blank"
+										style="color:inherit;text-decoration: none;">
+										<h4>Design navigation</h4>
+										<p style="font-size: 10px;">设计导航-精选最好的设计网站大全</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-4 col-md-2 subpage-block">
+								<div class="service-block" style="background-color: #F6F6F6;">
+									<a href="https://email.163.com/" target="_blank"
+										style="color:inherit;text-decoration: none;">
+										<h4>Email.163</h4>
+										<p style="font-size: 10px;">网易邮箱-中国第一大电子邮箱服务商</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-4 col-md-2 subpage-block">
+								<div class="service-block" style="background-color: #F6F6F6;">
+									<a href="https://www.515ppt.com/" target="_blank"
+										style="color:inherit;text-decoration: none;">
+										<h4>515PPT</h4>
+										<p style="font-size: 10px;">提供精美的PPT模板/简历/范文/音效配乐下载</p>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-4 col-md-2 subpage-block">
+								<div class="service-block" style="background-color: #F6F6F6;">
+									<a href="https://www.aliyun.com/" target="_blank"
+										style="color:inherit;text-decoration: none;">
+										<h4>Aliyun</h4>
+										<p style="font-size: 10px;">阿里云-全球领先的云计算及人工智能科技公司</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-4 col-md-2 subpage-block">
+								<div class="service-block" style="background-color: #F6F6F6;">
+									<a href="https://github.com/" target="_blank"
+										style="color:inherit;text-decoration: none;">
+										<h4>GitHub</h4>
+										<p style="font-size: 10px;">面向开源及私有软件项目的托管平台，建议翻墙</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-4 col-md-2 subpage-block">
+								<div class="service-block" style="background-color: #F6F6F6;">
+									<a href="https://www.iconfont.cn/" target="_blank"
+										style="color:inherit;text-decoration: none;">
+										<h4>Iconfont*</h4>
+										<p style="font-size: 10px;">阿里巴巴矢量图标库，提供下载/在线存储/格式转换</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-4 col-md-2 subpage-block">
+								<div class="service-block" style="background-color: #F6F6F6;">
+									<a href="http://hao.shejidaren.com/" target="_blank"
+										style="color:inherit;text-decoration: none;">
+										<h4>Design navigation</h4>
+										<p style="font-size: 10px;">设计导航-精选最好的设计网站大全</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-4 col-md-2 subpage-block">
+								<div class="service-block" style="background-color: #F6F6F6;">
+									<a href="https://email.163.com/" target="_blank"
+										style="color:inherit;text-decoration: none;">
+										<h4>Email.163</h4>
+										<p style="font-size: 10px;">网易免费邮箱-中国第一大电子邮箱服务商</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-4 col-md-2 subpage-block">
+								<div class="service-block" style="background-color: #F6F6F6;">
+									<a href="https://www.515ppt.com/" target="_blank"
+										style="color:inherit;text-decoration: none;">
+										<h4>515PPT</h4>
+										<p style="font-size: 10px;">提供精美的PPT模板/简历/范文/音效配乐下载</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- End of Clients block -->
+
+						<!-- Fun facts block -->
+						<div class="block-title">
+							<h3>有趣的事情</h3>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-6 col-md-3 subpage-block">
+								<div class="fun-fact-block gray-bg">
+									<i class="pe-7s-icon pe-7s-smile"></i>
+									<h4>快乐的瞬间</h4>
+									<span class="fun-value">934</span>
+								</div>
+							</div>
+
+							<div class="col-sm-6 col-md-3 subpage-block">
+								<div class="fun-fact-block">
+									<i class="pe-7s-icon pe-7s-alarm"></i>
+									<h4>学习时间</h4>
+									<span class="fun-value">2,880h</span>
+								</div>
+							</div>
+
+							<div class="col-sm-6 col-md-3 subpage-block">
+								<div class="fun-fact-block gray-bg">
+									<i class="pe-7s-icon pe-7s-medal"></i>
+									<h4>证书情况</h4>
+									<span class="fun-value">7</span>
+								</div>
+							</div>
+
+							<div class="col-sm-6 col-md-3 subpage-block">
+								<div class="fun-fact-block">
+									<i class="pe-7s-icon pe-7s-coffee"></i>
+									<h4>咖啡消耗量</h4>
+									<span class="fun-value">0</span>
+								</div>
+							</div>
+						</div>
+						<!-- End of Fun fucts block -->
+					</section>
+					<!-- End of About Me Subpage -->
+
+					<!-- Resume Subpage 简历-子页 -->
+					<section class="pt-page pt-page-3" data-id="resume">
+						<div class="section-title-block">
+							<h2 class="section-title">Resume</h2>
+							<h5 class="section-description">简历、经验</h5>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-6 col-md-4 subpage-block">
+								<div class="block-title">
+									<h3>经历</h3>
+								</div>
+								<div class="timeline">
+									<div class="timeline-event te-primary">
+										<h5 class="event-date">2001-2009</h5>
+										<h4 class="event-name">广东省广州市</h4>
+										<span class="event-description">失去了一切又重生</span>
+										<p>不想提及的往事就不提了</p>
+									</div>
+									<div class="timeline-event te-primary">
+										<h5 class="event-date">2009-2018</h5>
+										<h4 class="event-name">四川省阆中市</h4>
+										<span class="event-description">初高中学习生活</span>
+										<p>初中学习优秀，因为游戏导致逐渐堕落，虽然考上了县城最好高中，高中又由于早恋，再次错失了考上好大学的机会，上了大学后最后悔的也许就是高中没有好好学习吧。可是人生只能向前，而我能做的可能就是不再浪费时间，珍惜当下的每一分每一秒，把欠缺的全部补回来，把不成熟的变得成熟，让本属于我的也不再迷路
+										</p>
+									</div>
+									<div class="timeline-event te-primary">
+										<h5 class="event-date">2018-2022</h5>
+										<h4 class="event-name">江苏省南通市</h4>
+										<span class="event-description">大学生活</span>
+										<p>大学也算是一般般，因为自己的原因只考进了大专，两年时间，几乎我目前掌握的知识和技术都是我自学的，所以上面为什么说高中没有好好学习是我最后悔的事；第三年步入实习，我唯一的目标并不是实习工作，实习不过是被迫而已，而真正的目标是准备升本考试，我清楚的知道自己人生的规划，这是我最后一次机会，我不会再迷失自己了，加油
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6 col-md-4 subpage-block">
+								<div class="block-title">
+									<h3>经验</h3>
+								</div>
+								<div class="timeline">
+									<!-- Single event -->
+									<div class="timeline-event te-primary">
+										<h5 class="event-date">Aug 2021 - Nov 2021</h5>
+										<h4 class="event-name">江苏省苏州市</h4>
+										<span class="event-description">PHP工程师</span>
+										<p>待11月4日更新</p>
+									</div>
+									<!-- Single event -->
+									<div class="timeline-event te-primary">
+										<h5 class="event-date">时间待定</h5>
+										<h4 class="event-name">地点待定</h4>
+										<span class="event-description">职业待定</span>
+										<p>实习心得待定</p>
+									</div>
+									<!-- Single event -->
+									<div class="timeline-event te-primary">
+										<h5 class="event-date">时间待定</h5>
+										<h4 class="event-name">地点待定</h4>
+										<span class="event-description">职业待定</span>
+										<p>实习心得待定</p>
+									</div>
+								</div>
+								<br>
+								<div class="block-title">
+									<h3>联系方式</h3>
+								</div>
+								<div class="contact-info-block">
+									<div class="ci-icon">
+										<i class="pe-7s-icon pe-7s-map-marker"></i>
+									</div>
+									<div class="ci-text">
+										<h5>Address：中国江苏省苏州市</h5>
+									</div>
+								</div>
+								<div class="contact-info-block">
+									<div class="ci-icon">
+										<i class="pe-7s-icon pe-7s-mail"></i>
+									</div>
+									<div class="ci-text">
+										<h5>E-mail：Chuanfu7w@163.com</h5>
+									</div>
+								</div>
+								<div class="contact-info-block">
+									<div class="ci-icon">
+										<i class="pe-7s-icon pe-7s-call"></i>
+									</div>
+									<div class="ci-text">
+										<h5>Phone：+86 15325277435</h5>
+									</div>
+								</div>
+								<div class="contact-info-block">
+									<div class="ci-icon">
+										<i class="pe-7s-icon pe-7s-check"></i>
+									</div>
+									<div class="ci-text">
+										<h5>QQ：2972958400&nbsp;&nbsp;&nbsp;WeChat：18279198377</h5>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6 col-md-4 subpage-block">
+								<div class="block-title">
+									<h3>设计技巧</h3>
+								</div>
+								<div class="skills-info">
+									<h4>网页设计</h4>
+									<div class="skill-container">
+										<div class="skill-percentage skill-1"></div>
+									</div>
+
+									<h4>平面设计</h4>
+									<div class="skill-container">
+										<div class="skill-percentage skill-2"></div>
+									</div>
+								</div>
+
+								<div class="block-title">
+									<h3>编程技巧</h3>
+								</div>
+								<div class="skills-info">
+									<h4>PHP</h4>
+									<div class="skill-container">
+										<div class="skill-percentage skill-8"></div>
+									</div>
+
+									<h4>HML5</h4>
+									<div class="skill-container">
+										<div class="skill-percentage skill-4"></div>
+									</div>
+
+									<h4>CSS3</h4>
+									<div class="skill-container">
+										<div class="skill-percentage skill-5"></div>
+									</div>
+
+									<h4>Vue</h4>
+									<div class="skill-container">
+										<div class="skill-percentage skill-6"></div>
+									</div>
+
+									<h4>jQuery</h4>
+									<div class="skill-container">
+										<div class="skill-percentage skill-5"></div>
+									</div>
+
+									<h4>C</h4>
+									<div class="skill-container">
+										<div class="skill-percentage skill-3"></div>
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-12" style="text-align: right;position: absolute;bottom: -200px;">
+									<div class="download-cv-block">
+										<a class="button" href="#" id="btn">下载简历</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- End Resume Subpage -->
+
+					<!-- Portfolio Subpage 作品-子页 -->
+					<section class="pt-page pt-page-4" data-id="portfolio">
+						<div class="section-title-block">
+							<h2 class="section-title">Works</h2>
+							<h5 class="section-description">作品</h5>
+						</div>
+
+						<!-- Portfolio Content -->
+						<div class="portfolio-content">
+
+							<!-- Portfolio filter -->
+							<ul id="portfolio_filters" class="portfolio-filters">
+								<li class="active">
+									<a class="filter btn btn-sm btn-link active" data-group="all">All</a>
+								</li>
+								<li>
+									<a class="filter btn btn-sm btn-link" data-group="media">Media</a>
+								</li>
+								<li>
+									<a class="filter btn btn-sm btn-link" data-group="illustration">Illustration</a>
+								</li>
+								<li>
+									<a class="filter btn btn-sm btn-link" data-group="video">Video</a>
+								</li>
+							</ul>
+							<!-- End of Portfolio filter -->
+
+							<!-- Portfolio Grid -->
+							<div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
+
+								<!-- Portfolio Item 1 -->
+								<figure class="item" data-groups='["all", "media"]'>
+									<a class="ajax-page-load" href="Works/portfolio-1.html">
+										<img src="images/portfolio/1.jpg" alt="">
+										<div>
+											<h5 class="name">Project Name</h5>
+											<small>Media</small>
+											<i class="fa fa-file-text-o"></i>
+										</div>
+									</a>
+								</figure>
+								<!-- /Portfolio Item 1 -->
+
+								<!-- Portfolio Item 2 -->
+								<figure class="item" data-groups='["all", "video"]'>
+									<a href="https://player.vimeo.com/video/97102654?autoplay=1"
+										title="Praesent Dolor Ex" class="lightbox mfp-iframe">
+										<img src="images/portfolio/2.jpg" alt="">
+										<div>
+											<h5 class="name">Project Name</h5>
+											<small>Video</small>
+											<i class="fa fa-video-camera"></i>
+										</div>
+									</a>
+								</figure>
+								<!-- /Portfolio Item 2 -->
+
+								<!-- Portfolio Item 3 -->
+								<figure class="item" data-groups='["all","illustration"]'>
+									<a href="images/portfolio/3.jpg" class="lightbox" title="Duis Eu Eros Viverra">
+										<img src="images/portfolio/3.jpg" alt="">
+										<div>
+											<h5 class="name">Project Name</h5>
+											<small>Illustration</small>
+											<i class="fa fa-image"></i>
+										</div>
+									</a>
+								</figure>
+								<!-- /Portfolio Item 3 -->
+
+								<!-- Portfolio Item 4 -->
+								<figure class="item" data-groups='["all", "media"]'>
+									<a class="ajax-page-load" href="Works/portfolio-1.html">
+										<img src="images/portfolio/4.jpg" alt="">
+										<div>
+											<h5 class="name">Project Name</h5>
+											<small>Media</small>
+											<i class="fa fa-file-text-o"></i>
+										</div>
+									</a>
+								</figure>
+								<!-- /Portfolio Item 4 -->
+
+								<!-- Portfolio Item 5 -->
+								<figure class="item" data-groups='["all", "illustration"]'>
+									<a href="images/portfolio/5.jpg" class="lightbox"
+										title="Aliquam Condimentum Magna Rhoncus">
+										<img src="images/portfolio/5.jpg" alt="">
+										<div>
+											<h5 class="name">Project Name</h5>
+											<small>Illustration</small>
+											<i class="fa fa-image"></i>
+										</div>
+									</a>
+								</figure>
+								<!-- /Portfolio Item 5 -->
+
+								<!-- Portfolio Item 6 -->
+								<figure class="item" data-groups='["all", "media"]'>
+									<a class="ajax-page-load" href="Works/portfolio-1.html">
+										<img src="images/portfolio/6.jpg" alt="">
+										<div>
+											<h5 class="name">Project Name</h5>
+											<small>Media</small>
+											<i class="fa fa-file-text-o"></i>
+										</div>
+									</a>
+								</figure>
+								<!-- /Portfolio Item 6 -->
+
+								<!-- Portfolio Item 7 -->
+								<figure class="item" data-groups='["all", "video"]'>
+									<a href="https://player.vimeo.com/video/97102654?autoplay=1" title="Nulla Facilisi"
+										class="lightbox mfp-iframe">
+										<img src="images/portfolio/7.jpg" alt="">
+										<div>
+											<h5 class="name">Project Name</h5>
+											<small>Video</small>
+											<i class="fa fa-video-camera"></i>
+										</div>
+									</a>
+								</figure>
+								<!-- /Portfolio Item 7 -->
+
+								<!-- Portfolio Item 8 -->
+								<figure class="item" data-groups='["all",  "media"]'>
+									<a class="ajax-page-load" href="Works/portfolio-1.html">
+										<img src="images/portfolio/8.jpg" alt="">
+										<div>
+											<h5 class="name">Project Name</h5>
+											<small>Media</small>
+											<i class="fa fa-file-text-o"></i>
+										</div>
+									</a>
+								</figure>
+								<!-- /Portfolio Item 8 -->
+
+								<!-- Portfolio Item 9 -->
+								<figure class="item" data-groups='["all","illustration"]'>
+									<a href="images/portfolio/9.jpg" class="lightbox" title="Mauris Neque Dolor">
+										<img src="images/portfolio/9.jpg" alt="">
+										<div>
+											<h5 class="name">Project Name</h5>
+											<small>Illustration</small>
+											<i class="fa fa-image"></i>
+										</div>
+									</a>
+								</figure>
+								<!-- /Portfolio Item 9 -->
+
+								<!-- Portfolio Item 10 -->
+								<figure class="item" data-groups='["all", "video"]'>
+									<a href="https://player.vimeo.com/video/97102654?autoplay=1"
+										title="Donec Lectus Arcu" class="lightbox mfp-iframe">
+										<img src="images/portfolio/10.jpg" alt="">
+										<div>
+											<h5 class="name">Project Name</h5>
+											<small>Video</small>
+											<i class="fa fa-video-camera"></i>
+										</div>
+									</a>
+								</figure>
+								<!-- /Portfolio Item 10 -->
+
+								<!-- Portfolio Item 11 -->
+								<figure class="item" data-groups='["all","illustration"]'>
+									<a href="images/portfolio/11.jpg" class="lightbox" title="Duis Eu Eros Viverra">
+										<img src="images/portfolio/11.jpg" alt="">
+										<div>
+											<h5 class="name">Project Name</h5>
+											<small>Illustration</small>
+											<i class="fa fa-image"></i>
+										</div>
+									</a>
+								</figure>
+								<!-- /Portfolio Item 11 -->
+
+								<!-- Portfolio Item 12 -->
+								<figure class="item" data-groups='["all","media"]'>
+									<a class="ajax-page-load" href="Works/portfolio-1.html">
+										<img src="images/portfolio/12.jpg" alt="">
+										<div>
+											<h5 class="name">Project Name</h5>
+											<small>Media</small>
+											<i class="fa fa-file-text-o"></i>
+										</div>
+									</a>
+								</figure>
+								<!-- /Portfolio Item 12 -->
+							</div>
+							<!-- /Portfolio Grid -->
+
+						</div>
+						<!-- /Portfolio Content -->
+
+					</section>
+					<!-- /Portfolio Subpage -->
+
+					<!-- Blog Subpage 博客-子页 -->
+					<section class="pt-page pt-page-5" data-id="blog">
+						<div class="section-title-block">
+							<h2 class="section-title">Blog</h2>
+							<h5 class="section-description">博客</h5>
+						</div>
+						<div class="blog-masonry">
+							<!-- Blog Post 1 -->
+							<div class="item">
+								<div class="blog-card">
+									<div class="media-block">
+										<a href="Blog/blog-post-1.html">
+											<img class="post-image img-responsive" src="images/blog/blog_post_1.jpg"
+												alt="blog-post-1" />
+											<div class="mask"></div>
+											<div class="post-date"><span class="day">6</span><span
+													class="month">Dec</span>
+												<!--<span class="year">2016</span>-->
+											</div>
+										</a>
+									</div>
+									<div class="post-info">
+										<ul class="category">
+											<li><a href="#">Travel</a></li>
+										</ul>
+										<a href="Blog/blog-post-1.html">
+											<h4 class="blog-item-title">Bootstrap is the Most Popular Framework</h4>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End of Blog Post 1 -->
+
+							<!-- Blog Post 2 -->
+							<div class="item">
+								<div class="blog-card">
+									<div class="media-block">
+										<a href="Blog/blog-post-1.html">
+											<img class="post-image img-responsive" src="images/blog/blog_post_2.jpg"
+												alt="blog-post-2" />
+											<div class="mask"></div>
+											<div class="post-date"><span class="day">3</span><span
+													class="month">Nov</span>
+												<!--<span class="year">2016</span>-->
+											</div>
+										</a>
+									</div>
+									<div class="post-info">
+										<ul class="category">
+											<li><a href="#">jQuery</a></li>
+										</ul>
+										<a href="Blog/blog-post-1.html">
+											<h4 class="blog-item-title">One Framework, Every Device</h4>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End of Blog Post 2 -->
+
+							<!-- Blog Post 3 -->
+							<div class="item">
+								<div class="blog-card">
+									<div class="media-block">
+										<a href="Blog/blog-post-1.html">
+											<img class="post-image img-responsive" src="images/blog/blog_post_3.jpg"
+												alt="blog-post-3" />
+											<div class="mask"></div>
+											<div class="post-date"><span class="day">12</span><span
+													class="month">Oct</span>
+												<!--<span class="year">2016</span>-->
+											</div>
+										</a>
+									</div>
+									<div class="post-info">
+										<ul class="category">
+											<li><a href="#">Sport</a></li>
+										</ul>
+										<a href="Blog/blog-post-1.html">
+											<h4 class="blog-item-title">Designed for Everyone, Everywhere</h4>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End of Blog Post 3 -->
+
+							<!-- Blog Post 4 -->
+							<div class="item">
+								<div class="blog-card">
+									<div class="media-block">
+										<a href="Blog/blog-post-1.html">
+											<img class="post-image img-responsive" src="images/blog/blog_post_4.jpg"
+												alt="blog-post-4" />
+											<div class="mask"></div>
+											<div class="post-date"><span class="day">18</span><span
+													class="month">Aug</span>
+												<!--<span class="year">2016</span>-->
+											</div>
+										</a>
+									</div>
+									<div class="post-info">
+										<ul class="category">
+											<li><a href="#">CSS</a></li>
+										</ul>
+										<a href="Blog/blog-post-1.html">
+											<h4 class="blog-item-title">An Introduction To PostCSS</h4>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End of Blog Post 4 -->
+
+							<!-- Blog Post 5 -->
+							<div class="item">
+								<div class="blog-card">
+									<div class="media-block">
+										<a href="Blog/blog-post-1.html">
+											<img class="post-image img-responsive" src="images/blog/blog_post_5.jpg"
+												alt="blog-post-5" />
+											<div class="mask"></div>
+											<div class="post-date"><span class="day">2</span><span
+													class="month">Jul</span>
+												<!--<span class="year">2016</span>-->
+											</div>
+										</a>
+									</div>
+									<div class="post-info">
+										<ul class="category">
+											<li><a href="#">CSS3</a></li>
+										</ul>
+										<a href="Blog/blog-post-1.html">
+											<h4 class="blog-item-title">Original and Innovative Web Layouts</h4>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End of Blog Post 5 -->
+
+							<!-- Blog Post 6 -->
+							<div class="item">
+								<div class="blog-card">
+									<div class="media-block">
+										<a href="Blog/blog-post-1.html">
+											<img class="post-image img-responsive" src="images/blog/blog_post_6.jpg"
+												alt="blog-post-6" />
+											<div class="mask"></div>
+											<div class="post-date"><span class="day">8</span><span
+													class="month">May</span>
+												<!--<span class="year">2016</span>-->
+											</div>
+										</a>
+									</div>
+									<div class="post-info">
+										<ul class="category">
+											<li><a href="#">HTML5</a></li>
+										</ul>
+										<a href="Blog/blog-post-1.html">
+											<h4 class="blog-item-title">Creative and Innovative Navigation Designs</h4>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End of Blog Post 6 -->
+
+							<!-- Blog Post 7 -->
+							<div class="item">
+								<div class="blog-card">
+									<div class="media-block">
+										<a href="Blog/blog-post-1.html">
+											<img class="post-image img-responsive" src="images/blog/blog_post_7.jpg"
+												alt="blog-post-7" />
+											<div class="mask"></div>
+											<div class="post-date"><span class="day">7</span><span
+													class="month">Apr</span>
+												<!--<span class="year">2016</span>-->
+											</div>
+										</a>
+									</div>
+									<div class="post-info">
+										<ul class="category">
+											<li><a href="#">Design</a></li>
+										</ul>
+										<a href="Blog/blog-post-1.html">
+											<h4 class="blog-item-title">Navigation for Mega-Sites</h4>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End of Blog Post 7 -->
+
+							<!-- Blog Post 8 -->
+							<div class="item">
+								<div class="blog-card">
+									<div class="media-block">
+										<a href="Blog/blog-post-1.html">
+											<img class="post-image img-responsive" src="images/blog/blog_post_8.jpg"
+												alt="blog-post-8" />
+											<div class="mask"></div>
+											<div class="post-date"><span class="day">21</span><span
+													class="month">Mar</span>
+												<!--<span class="year">2016</span>-->
+											</div>
+										</a>
+									</div>
+									<div class="post-info">
+										<ul class="category">
+											<li><a href="#">CSS3</a></li>
+										</ul>
+										<a href="blog-post-1.html">
+											<h4 class="blog-item-title">Front-End Challenge Accepted: CSS 3D Cube</h4>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End of Blog Post 8 -->
+						</div>
+					</section>
+					<!-- End Blog Subpage -->
+				</div>
+			</div>
+			<!-- /Page changer wrapper -->
+		</div>
+		<!-- /Main Content -->
 	</div>
 
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/page-transition.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/validator.js"></script>
+	<script src="js/jquery.shuffle.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery.hoverdir.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/canvas.js"></script>
+	<script src="js/Resume+send.js"></script>
+
+	<script src="js/script.js"></script>
 	<script src="plugins/chart.min.js"></script>
 	<script src="plugins/feather.min.js"></script>
-	<script src="js/script.js"></script>
 </body>
 
 </html>
