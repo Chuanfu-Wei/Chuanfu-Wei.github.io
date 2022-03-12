@@ -542,7 +542,7 @@ window.onload = function () {
     var minutes = checkNum(Math.floor((result / 60) % 60)); // 分钟
     var seconds = checkNum(Math.floor(result % 60)); // 秒数
     mydiv.innerText = days + '天' + hours + '小时' + minutes + '分钟' + seconds + '秒';
-    mydiv.style.cssText = 'color:red;font: bold 18px/20px "楷体";';
+    mydiv.style.cssText = 'color:red;font: bold 18px/20px "楷体";margin: 30px auto;display: block;width: 200px;height: 50px;';
 
     setTimeout(showTime, 1000);
   }
