@@ -72,10 +72,10 @@
 						<a class="pt-trigger" href="#blog" data-animation="58" data-goto="5">博客</a>
 					</li>
 					<li>
-						<a class="active" target="_blank" href="html/Code_Rain.html"><span aria-hidden="true"></span>黑客帝国代码雨</a>
+						<a class="active" target="_blank" href="html/Code_Rain.html"><span aria-hidden="true"></span>代码雨</a>
 					</li>
 					<li>
-						<a class="active" target="_blank" href="html/bck+cube.html"><span aria-hidden="true"></span>Cube+Bck+Music</a>
+						<a class="active" target="_blank" href="html/bck+cube.html"><span aria-hidden="true"></span>Cube+Bck</a>
 					</li>
 				</ul>
 				<!-- /Main menu -->
@@ -85,14 +85,15 @@
 				<ul class="social-links">
 					<li><a class="tip social-button" href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
 					<li><a class="tip social-button" href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-					<li><a class="tip social-button" href="#" title="Google Plus"><i class="fa fa-google-plus"></i></a>
-					</li>
-					<!--<li><a class="tip social-button" href="#" title="Youtube"><i class="fa fa-youtube"></i></a></li>-->
-					<!--<li><a class="tip social-button" href="#" title="last.fm"><i class="fa fa-lastfm"></i></a></li>-->
-					<!--<li><a class="tip social-button" href="#" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>-->
+					<li><a class="tip social-button" href="#" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+					<li><a class="tip social-button" href="#" title="Youtube"><i class="fa fa-youtube"></i></a></li>
+					<li><a class="tip social-button" href="#" title="last.fm"><i class="fa fa-lastfm"></i></a></li>
+					<li><a class="tip social-button" href="#" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>
 				</ul>
-				<span class="notification-dropdown__title">转本倒计时：</span>
-				<span class="notification-dropdown__subtitle" id="examDate"></span>
+
+				<!-- 转本倒计时 -->
+				<p id="examDate" style="margin: 0 auto;"></p>
+
 				<!-- /Social buttons -->
 			</div>
 			<!-- /Navigation & Social buttons -->
@@ -173,13 +174,6 @@
 							<div class="col-sm-6 col-md-6 subpage-block">
 								<div class="general-info">
 									<h3>自我介绍，也分享一下搭建网站的快乐</h3>
-									<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;叫我小傅就好，相信大家也看得出来网站域名是小傅博客的缩写。
-										说到网站，从域名 到 服务器 再到 IPC备案，总的一个流程下来花了我大概20天，也算是相信了网上那些一天就能完成备案的（微笑）；在等待网站备案的过程中，
-										也算是差不多利用这个时间写完了网站的代码。其实说来挺不容易的，谁叫我技术还不到位呢，也是花了些时间，一共也是更新了大概15个版本才完成，而最终使用这个版本也是我觉得还凑合，哈哈。
-									</p>
-									<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;至于为什么要搭建这个博客呢，既然是博客，肯定是想和大家一起在分享中学习的，也希望各位可以针对不足的地方提出建议，从善如流！
-									</p>
-									<h5>*声明：网站已备案，目前仅用于个人学习与博客分享，暂不用于盈利*</h5>
 								</div>
 							</div>
 
@@ -494,21 +488,19 @@
 										<h5 class="event-date">2001-2009</h5>
 										<h4 class="event-name">广东省广州市</h4>
 										<span class="event-description">失去了一切又重生</span>
-										<p>不想提及的往事就不提了</p>
+										<p></p>
 									</div>
 									<div class="timeline-event te-primary">
 										<h5 class="event-date">2009-2018</h5>
 										<h4 class="event-name">四川省阆中市</h4>
 										<span class="event-description">初高中学习生活</span>
-										<p>初中学习优秀，因为游戏导致逐渐堕落，虽然考上了县城最好高中，高中又由于早恋，再次错失了考上好大学的机会，上了大学后最后悔的也许就是高中没有好好学习吧。可是人生只能向前，而我能做的可能就是不再浪费时间，珍惜当下的每一分每一秒，把欠缺的全部补回来，把不成熟的变得成熟，让本属于我的也不再迷路
-										</p>
+										<p></p>
 									</div>
 									<div class="timeline-event te-primary">
 										<h5 class="event-date">2018-2022</h5>
 										<h4 class="event-name">江苏省南通市</h4>
 										<span class="event-description">大学生活</span>
-										<p>大学也算是一般般，因为自己的原因只考进了大专，两年时间，几乎我目前掌握的知识和技术都是我自学的，所以上面为什么说高中没有好好学习是我最后悔的事；第三年步入实习，我唯一的目标并不是实习工作，实习不过是被迫而已，而真正的目标是准备升本考试，我清楚的知道自己人生的规划，这是我最后一次机会，我不会再迷失自己了，加油
-										</p>
+										<p></p>
 									</div>
 								</div>
 							</div>
@@ -1074,8 +1066,7 @@
 	<script src="js/Resume+send.js"></script>
 
 	<script src="js/script.js"></script>
-	<script src="plugins/chart.min.js"></script>
-	<script src="plugins/feather.min.js"></script>
+
 </body>
 
 </html>
