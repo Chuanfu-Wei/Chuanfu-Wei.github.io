@@ -1,3 +1,5 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
 /* Document
    ========================================================================== */
 
@@ -6,7 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-@import url(../fonts/stylesheet.css);
+/* @import url(../fonts/stylesheet.css); */
 
 html {
   line-height: 1.15;
